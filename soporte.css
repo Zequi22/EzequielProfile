@@ -1,0 +1,406 @@
+/* =========================
+   Responsive General
+   ========================= */
+
+/* --- Pantallas grandes (hasta 1100px) --- */
+@media (max-width: 1100px) {
+}
+
+/* --- Tablets y pantallas medianas (hasta 900px) --- */
+@media (max-width: 900px) {
+    /* Header y menú hamburguesa */
+    .header-container {
+        position: relative;
+    }
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        box-shadow: none;
+        margin-left: 16px;
+    }
+    .hamburger-menu span {
+        display: block;
+        height: 4px;
+        width: 26px;
+        margin: 4px 0;
+        background: #000;
+        border-radius: 3px;
+        transition: all 0.32s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        right: 0;
+        width: 60vw;
+        min-width: 140px;
+        max-width: 220px;
+        background: #fffaf3;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(124, 111, 87, 0.08);
+        z-index: 10;
+        padding: 18px 0 12px 0;
+        align-items: center;
+        border-top: 1px solid #e2c799;
+    }
+    .nav-menu.active {
+        display: flex;
+        animation: menuFadeIn 0.25s;
+    }
+    .nav-menu li {
+        margin: 10px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-menu a {
+        color: #000000;
+        font-size: 1.08em;
+        font-weight: 600;
+        padding: 8px 0;
+        border-radius: 6px;
+        background: none;
+        transition: background 0.18s, color 0.18s;
+        text-align: center;
+        width: 90%;
+        display: block;
+    }
+    .nav-menu a:hover {
+        background: #e2c799;
+        color: #fff;
+    }
+
+    /* Habilidades */
+    .skills-groups {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .skills-group {
+        width: 100%;
+        align-items: center;
+    }
+    .skills-flex {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .skill-modern-card {
+        min-width: 90px;
+        max-width: 110px;
+        width: 45vw;
+        margin: 4px 2px;
+        padding: 10px 4px;
+        border-radius: 10px;
+        font-size: 0.92em;
+        box-shadow: 0 2px 8px rgba(124, 111, 87, 0.07);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-modern-icon {
+        font-size: 2.2em;
+        margin-bottom: 6px;
+    }
+    .skill-modern-title {
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+
+    /* Sobre mí */
+    #sobre-mi .about-content {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+   
+    #sobre-mi .about-image {
+        width: 160px;
+        height: 160px;
+    }
+
+   /* Timeline de formaciones */
+    #formaciones .trainings-timeline {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 48px;
+        max-width: 100%;
+    }
+    #formaciones .trainings-timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background: #e2c799;
+        transform: translateX(-50%);
+        border-radius: 2px;
+        z-index: 0;
+    }
+    #formaciones .training-item,
+    #formaciones .training-item.left,
+    #formaciones .training-item.right {
+        width: 90vw;
+        max-width: 300px;
+        min-width: 120px;
+        background: #fffaf3;
+        z-index: 1;
+        margin: 32px auto 0 auto; /* Espacio arriba para la bola */
+        padding: 24px 10px 18px 10px; /* Menos padding arriba */
+        box-sizing: border-box;
+        position: relative;
+        align-self: center;
+    }
+    #formaciones .training-item.right .training-dot,
+    #formaciones .training-item.left .training-dot {
+        left: 50% !important;
+        right: auto !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    #formaciones .training-dot {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        background: #e2c799;
+        border: 4px solid #fffaf3;
+        border-radius: 50%;
+        z-index: 2;
+        box-shadow: 0 2px 8px rgba(124, 111, 87, 0.13);
+    }
+
+    /* Proyectos */
+
+
+    /* Contacto */
+    .met-contact {
+        max-width: 98vw;
+        padding: 32px 8px 24px 8px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 100%;
+        justify-content: center;
+    }
+    .contact-card {
+        min-width: 0;
+        max-width: 320px;
+        width: 90vw;
+        margin: 0 auto;
+        padding: 20px 8px;
+    }
+}
+
+/* --- Móviles (hasta 700px) --- */
+@media (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+    /* Logo y modelo 3D */
+    .logo-section {
+        padding-top: 40px !important;
+        margin-top: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-3d-flex {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .model-3d-hang {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    model-viewer#viewer3d,
+    .model-3d-img {
+        width: 90vw !important;
+        max-width: 320px !important;
+        height: 90vw !important;
+        max-height: 320px !important;
+        margin: 0 auto !important;
+        display: block;
+        z-index: 1;
+    }
+    .logo-container {
+        width: 90px;
+        max-width: 90px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hexagon-border {
+        width: 100%;
+        height: 100%;
+        padding: 6px;
+    }
+    .hexagon-logo {
+        width: 120px;
+        max-width: 120px;
+        height: auto;
+        display: block;
+    }
+    .info {
+        margin-top: 40px;
+    }
+    .logo-info-row {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .logo-info {
+        font-size: 0.95em;
+        padding: 8px;
+    }
+
+    /* Secciones principales: espacios y legibilidad */
+    #habilidades,
+    #sobre-mi,
+    #formaciones,
+    #proyectos,
+    #contacto,
+    .contact-section {
+        padding: 36px 0 36px !important;
+    }
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 8px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+    .section-title {
+        font-size: 2em !important;
+        margin-bottom: 40px !important;
+    }
+
+    /* Habilidades */
+    .skills-groups {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        width: 100%;
+    }
+    .skills-group {
+        min-width: 0;
+        max-width: 100%;
+        padding: 18px 8px 12px;
+    }
+    .skills-flex {
+        gap: 8px;
+    }
+    .skill-modern-card {
+        width: 90px;
+        max-width: 100px;
+        padding: 10px 2px;
+        font-size: 0.88em;
+    }
+    .skill-modern-icon {
+        font-size: 1.6em;
+        margin-bottom: 4px;
+    }
+
+    /* Sobre mí */
+    #sobre-mi .about-content {
+        gap: 18px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sobre-mi .speech-bubble {
+        padding: 16px 8px;
+        font-size: 1em;
+        max-width: 98vw;
+    }
+    #sobre-mi .about-image {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 0;
+    }
+
+    /* Formaciones */
+    #formaciones .container {
+        padding: 0 8px !important;
+        height: auto !important;
+    }
+    #formaciones .trainings-timeline {
+        gap: 24px;
+        padding: 0;
+        min-width: 0;
+        max-width: 100%;
+    }
+    #formaciones .training-item,
+    #formaciones .training-item.left,
+    #formaciones .training-item.right {
+        width: 98vw;
+        max-width: 220px;
+        min-width: 100px;
+        padding: 14px 6px;
+        font-size: 0.95em;
+        margin: 0 auto 12px auto;
+    }
+    #formaciones .training-dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Proyectos */
+
+    /* Contacto */
+    .met-contact {
+        max-width: 100vw;
+        padding: 18px 2px 12px 2px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .contact-card {
+        max-width: 98vw;
+        width: 98vw;
+        padding: 12px 2px;
+    }
+}
+
+/* --- Animación menú hamburguesa --- */
+@keyframes menuFadeIn {
+    from { opacity: 0; transform: translateY(-16px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+

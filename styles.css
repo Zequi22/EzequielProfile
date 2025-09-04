@@ -5,6 +5,7 @@
     --color-bg: #c2c1c1;
     --color-primary: #0F2940;
     --color-secondary: #295073;
+    --color-light: #509adb;
     --color-accent: #A69C8A;
     --color-detail: #59370C;
     --color-white: #fff;
@@ -250,7 +251,7 @@ model-viewer#viewer3d {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
-    height: 1200px;
+    height: 1300px;
     border-bottom: 5px solid;
     border-image: linear-gradient(to right,rgba(27,27,211,0), rgba(253, 253, 255, 0.7), rgba(27,27,211,0)) 1;
 }
@@ -260,7 +261,7 @@ model-viewer#viewer3d {
     color: var(--color-accent);
     font-weight: 800;
     letter-spacing: 2px;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
     text-align: center;
 }
 
@@ -286,8 +287,8 @@ model-viewer#viewer3d {
 }
 
 .skills-group-title {
-    font-size: 1.3em;
-    color: var(--color-accent);
+    font-size: 1.9em;
+    color: var(--color-bg);
     font-weight: 700;
     margin-bottom: 24px;
     letter-spacing: 1px;
@@ -308,9 +309,7 @@ model-viewer#viewer3d {
 }
 
 .skill-modern-card {
-    background: var(--color-accent);
     border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(15, 41, 64, 0.08);
     padding: 22px 14px 16px;
     display: flex;
     flex-direction: column;
@@ -322,17 +321,19 @@ model-viewer#viewer3d {
 
 .skill-modern-card:hover {
     transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 24px rgba(15, 41, 64, 0.15);
-    background: var(--color-terciary);
+    background: var(--color-light);
+  box-shadow:  2px -6px 12px #4584bc,
+             -2px 6px 12px #5bb0fa;
+transform: translateY(-3px) scale(1.03);
 }
 
 .skill-modern-icon {
-    width: 66px;
-    height: 66px;
+    width: 76px;
+    height: 76px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.4em; /* Ajusta este valor si algún icono se ve más grande o pequeño */
+    font-size: 2.4em;
     margin-bottom: 12px;
     background: var(--color-white);
     border-radius: 50%;
@@ -343,7 +344,7 @@ model-viewer#viewer3d {
 }
 
 .skill-modern-title {
-    color: var(--color-primary);
+    color: var(--color-bg);
     font-size: 1.08em;
     font-weight: 700;
     margin-bottom: 4px;
@@ -580,17 +581,21 @@ model-viewer#viewer3d {
 
 #proyectos .btn-see-more {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 15px 24px;
     background-color: var(--color-secondary);
     color: var(--color-white);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 1.5em;
     transition: background-color 0.3s;
+    border: 1px solid var(--color-accent);
 }
 
 #proyectos .btn-see-more:hover {
-    background-color: var(--color-detail);
+    background-color: #509adb;
+    box-shadow:  2px -6px 12px #4584bc,
+             -2px 6px 12px #5bb0fa;
+    
 }
 /* Grid para proyectos personales */
 .parent {
@@ -661,12 +666,15 @@ model-viewer#viewer3d {
 }
 
 .parent h3 {
-    color: var(--color-accent);
-    font-size: 1.35em;
-    font-weight: 700;
-    margin-bottom: 12px;
+    color: var(--color-white);
+    font-size: 1.90em;
+    font-weight: 900;
+    margin-top: 5%;
+    margin-bottom: 30px;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    border-bottom: 2px solid var(--color-bg);
 }
 
 .parent p {
@@ -676,7 +684,12 @@ model-viewer#viewer3d {
     margin-top: 8px;
     line-height: 1.5;
 }
-
+.link {
+    position: absolute;
+    bottom: 44px;
+    display: flex;
+    gap: 20px;
+}
 /* =========================
    Sección Contacto Adaptada
    ========================= */
@@ -725,7 +738,7 @@ model-viewer#viewer3d {
 
  .met{
    border-radius: 20px;
-    background: #295073;
+    background: var(--color-secondary);
     box-shadow:  -6px -6px 12px #234462,
              6px 6px 12px #2f5c84;
     border: 1PX solid var(--color-accent);
@@ -735,7 +748,6 @@ model-viewer#viewer3d {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  border: 2px solid var(--color-accent);
   padding: 48px 24px 32px 24px;
   display: flex;
   flex-direction: column;
@@ -826,11 +838,19 @@ model-viewer#viewer3d {
   display: flex;
   align-items: center;
   gap: 8px;
+  background-color: var(--color-secondary);
   transition: background 0.2s;
+  transition: transform 1.3s,;
+  
+  
 }
 .extra-btn:hover {
-  background: #6ca0ff;
-  color: var(--color-secondary);
+  background: var(--color-light);
+  box-shadow:  2px -6px 12px #4584bc,
+             -2px 6px 12px #5bb0fa;
+transform: translateY(-3px) scale(1.03);
+
+  
 }
 
 /* =========================

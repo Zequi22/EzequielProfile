@@ -433,16 +433,7 @@ transform: translateY(-3px) scale(1.03);
     object-fit: cover;
     border-radius: 50%;
 }
-/*
-.background {
-    width: 100%;
-  height: 100%;
-  z-index: -99;
-  --color: rgba(114, 114, 114, 0.3);
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-  background-size: 55px 55px;
-}*/
+
 /* =========================
    Formaciones
    ========================= */
@@ -617,12 +608,10 @@ transform: translateY(-3px) scale(1.03);
     min-height: 620px;
     max-width: 100%;
     position: relative;
+    border-top-left-radius: 0px !important;
+    border-bottom-right-radius: 0% !important;
 }
-/*
-.project1:hover, .project2:hover, .project3:hover, .project4:hover {
-    box-shadow: 0 8px 32px rgba(15, 41, 64, 0.18);
-    background: var(--color-terciary);
-}*/
+
 
 .project1 {
     grid-column: span 2 / span 2;
@@ -649,7 +638,7 @@ transform: translateY(-3px) scale(1.03);
     width: 100%;
     max-width: 620px;
     max-height: 280px;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0 4px 24px rgba(15, 41, 64, 0.15);
     overflow: hidden;
     margin-bottom: 18px;
@@ -719,28 +708,28 @@ transform: translateY(-3px) scale(1.03);
     gap: 10px;
     margin-top: 40px;
     border-radius: 30px !important;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 3rem;
     
 }
  .tittle-contact {
-    font-size: 1.9em;
+    font-size: 1.6em;
     color: var(--color-bg);
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     letter-spacing: 1px;
     font-weight: 500;
  }
  .description{
     color: var(--color-white);
-    font-size: 1.25rem;
-    gap: 60px;
+    font-size: 1.15rem;
+    gap: 20px;
  }
 
  .met{
-   border-radius: 20px;
+    border-radius: 18px;
     background: var(--color-secondary);
-    box-shadow:  -6px -6px 12px #234462,
-             6px 6px 12px #2f5c84;
+    box-shadow:  -9px -9px 19px #234462,
+             9px 9px 19px #2f5c84;
     border: 1PX solid var(--color-accent);
  }
 
@@ -856,6 +845,49 @@ transform: translateY(-3px) scale(1.03);
 /* =========================
     Footer
    ========================= */
+
+.background {
+    width: 100%;
+  height: 100%;
+  z-index: -99;
+  --color: rgba(114, 114, 114, 0.3);
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
+footer {
+    background: rgba(3, 7, 18, 1);
+    color: var(--color-white);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    }
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.footer-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.footer-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+}
+.footer-content a {
+    color: #6ca0ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.contact-f{
+    margin-top: 20px;
+    font-size: 0.95em; 
+}
 
 
 /* =========================
